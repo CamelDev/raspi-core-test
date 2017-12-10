@@ -6,4 +6,8 @@
     <RuntimeIdentifiers>win10-arm;ubuntu.16.04-arm;linux-arm</RuntimeIdentifiers>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Unosquare.Raspberry.IO" Version="0.12.0" />
+  </ItemGroup>
+
 </Project>

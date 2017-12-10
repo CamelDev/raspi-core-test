@@ -18,7 +18,7 @@ var runtime = Argument("runtime", "linux-arm");
 var destinationIp = Argument("destinationPi", "raspiedge");
 var destinationDirectory = Argument("destinationDirectory", @"/home/pi/dev/blinker");
 var username = Argument("username", "pi");
-var sessionname = Argument("sessionname", "raspiedgge");
+var sessionname = Argument("sessionname", "raspiedge");
 var executableName = Argument("executableName", "raspitest");
 
 //////////////////////////////////////////////////////////////////////

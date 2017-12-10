@@ -1,4 +1,5 @@
 ﻿using System;
+using Raspi.Gpio;
 
 namespace raspitest
 {
@@ -7,6 +8,10 @@ namespace raspitest
         static void Main(string[] args)
         {
             Console.WriteLine("Hello Internet of Things!");
+
+            var blinker = new RaspiBlinker();
+
+            blinker.Blink(12, 20);
         }
     }
 }
