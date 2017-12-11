@@ -1,4 +1,9 @@
-public interface IGpioBlinker
+using CamelDev.AutoCtrl.Device.Gpio;
+
+namespace CamelDev.AutoCtrl
 {
-    void Blink(int pinNumber, int count);   
+    public interface IGpioBlinker
+    {
+        void TestBlink(BcmIo pin, int count);   
+    }
 }

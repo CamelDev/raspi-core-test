@@ -1,13 +1,13 @@
 using System;
 using Unosquare.RaspberryIO;
 using Unosquare.RaspberryIO.Gpio;
-using Raspi.Gpio;
+using CamelDev.AutoCtrl.Device.Gpio;
 
-namespace Raspi.Gpio
+namespace CamelDev.AutoCtrl.Device.Gpio
 {
     public class RaspiBlinker : IGpioBlinker
     {
-        public void Blink(int gpioNumber, int count)
+        public void TestBlink(BcmIo gpioNumber, int count)
         {
             
             while(count-- > 0)
@@ -25,18 +25,6 @@ namespace Raspi.Gpio
             
         }
 
-        private GpioPin GetPin(int gpioNumber)
-        {
-            var pinNumber = Enum.Parse(typeof(RasPin), gpioNumber.ToString() );
-
-            switch(pinNumber)
-            {
-                case RasPin.Bcm1: return Pi.Gpio.Pin01;
-                case RasPin.Bcm2: return Pi.Gpio.Pin08;
-
-                case RasPin.Bcm12: return Pi.Gpio.Pin26;                    
-                default: throw new ApplicationException("Incorect PIN number");
-            }
-        }
+       
     }
 }

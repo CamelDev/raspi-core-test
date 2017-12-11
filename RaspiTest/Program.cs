@@ -1,5 +1,5 @@
 ﻿using System;
-using Raspi.Gpio;
+using CamelDev.AutoCtrl.Device.Gpio;
 
 namespace raspitest
 {
