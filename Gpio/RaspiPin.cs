@@ -9,7 +9,13 @@ namespace CamelDev.AutoCtrl.Device.Gpio
 
         public void SetPinValue(BcmIo pin, PinValue value)
         {
-            GetGpioPinByBcmNumber(pin).SetPinValue(val);
+            // TODO: set mode to output if possible!
+            GetGpioPinByBcmNumber(pin).Write(value == PinValue.High ? true : false);
+        }
+
+        public PinValue GetPinValue(BcmIo pin)
+        {
+            return GetGpioPinByBcmNumber(pin).Read() ? PinValue.High : PinValue.Low;
         }
 
         private GpioPin GetGpioPinByBcmNumber(BcmIo bcmPinNumber) 

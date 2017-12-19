@@ -6,5 +6,6 @@ namespace CamelDev.AutoCtrl
     public interface IDevicePin
     {
         void SetPinValue(BcmIo pin, PinValue value);   
+        PinValue GetPinValue(BcmIo pin);  
     }
 }    
